@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 const bot = new Discord.Client();
-const prefix = ("=");
+const prefix = ("**");
 
 bot.on('ready', () => {
     bot.user.setPresence({game: { name: 'Sucer issey dans les vestiaire', type: 0} });
@@ -9,9 +9,9 @@ bot.on('ready', () => {
 });
 
 bot.on('message',message =>{
-        if(message.content ===prefix+'ping'){
-            message.reply('pong');
-            console.log('ping pong!');
+        if(message.content ===prefix+'no'){
+            message.reply('https://img.gentside.co.uk/article/funny/the-funniest-video-on-youtube-apparently_3e00dcd79cc6e3f69eda3209a4df470f299a7f68.jpg');
+            console.log('no no no');
         }
         if(message.content ===prefix+"kazuto"){
             message.reply('https://www.instagram.com/kazouto_yuki');
@@ -49,39 +49,23 @@ bot.on('message',message =>{
             message.reply('www.youtube.com');
             console.log('link of youtube');
         }
-        if(message.content ===prefix+'faction'){
-            message.reply('kazuto_Himejima , Matouspartan ,thopher59877 ,Shadowdo ,Flamo ,jane et Shaddow555');
-            console.log('menber of faction');
-        }
         if(message.content ===prefix+'orikami'){
             message.reply('https://www.etsy.com/fr/shop/OriKamiFR');
             console.log('orikami of kuikuisan on etsy ');
-        }
-        if(message.content ===prefix+'nique ta rase akeno'){
-            message.reply('Hooo oui j aime sa');
-            console.log('j aime sa ');
-        }
-        if(message.content ===prefix+'tfk'){
-            message.reply('je te prend dans les toilette');
-            console.log('j aime sa ');
-        }
-        if(message.content ===prefix+'akeno suce moi'){
-            message.reply('avec du gravier ?');
-            console.log('j aime sa ');
         }
         if(message.content ===prefix+'help'){
             var help_embed = new Discord.RichEmbed()
             .setColor('#01FRDC')
             .addField("**help", "commandes du bot !")
             .addField("**kazuto", "insta kazuto")
-            .addField("**matou !", "insta matias")
             .addField("**kuikuisan","insta kuikuisan")
             .addField("**OriKami", "Soutenir KuiKuisan")
             .addField("**amv", "amv DXD")
-            .addField("**dragon", "La chanson du dragon")
             .addField("**akeno?", "parler a akeno" )
-            .addField("**soom", "pack de texture de la faction")
-            .addField("**faction", "Membre de la fac: kazuto_Himejima Matouspartan thopher59877 Shadowdo Flamo jane Shaddow555")
+            .addField("**charles", "Moskau" )
+            .addField("**no", "no no no" )
+
+
             message.channel.sendEmbed(help_embed);
          //message.channel.sendMessage("Voici les commandes du bot :\n -/help pour afficher les commandes");
             console.log('need help');
@@ -108,35 +92,6 @@ bot.on('message',message =>{
         }
 
 });
-
-bot.on('guildMemberAdd',member =>{
-    member.createDM().then(channel =>{
-     bot.channels.get('484747799737532446').send('◢◤━━━━━◤◢★◣◥━━━━━◥◣');
-     bot.channels.get('484747799737532446').send('**βienvenue sur le discørde de la Soom!**');
-     bot.channels.get('484747799737532446').send(member.displayName);
-     bot.channels.get('484747799737532446').send('◥◣━━━━━◣◥★◤◢━━━━━◢◤ ');
-     
-     console.log("new member was join,"+member.displayName);
-        return channel.send('Bienvenue Sur Mon serveur,'+ member.displayName);
-         
-    }).catch(console.error)
-});
-
-bot.on('guildMemberRemove',member =>{
-    member.createDM().then(channel =>{
-     bot.channels.get('484747799737532446').send('◢◤━━━━━◤◢★◣◥━━━━━◥◣');
-     bot.channels.get('484747799737532446').send("**Ĥeureux d'avøir fait ta cønnaissance**");
-     bot.channels.get('484747799737532446').send(member.displayName);
-     bot.channels.get('484747799737532446').send('◥◣━━━━━◣◥★◤◢━━━━━◢◤ ');
-     console.log("old member was leave, "+member.displayName);
-     
-       
-    }).catch(console.error)
-});
-
-
-
-
 
 function random(min, max) {
     min = Math.ceil(0);
